@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart JS Practice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Pre-Covid Days</h1>
+      <h2>What did we do pre-covid?</h2>
+      <canvas id="myChart" width="1600" height="900"></canvas>
+
+      <h1>Post-Covid Days</h1>
+      <h2>What are we doing post-covid?</h2>
+      <canvas id="myChart2" width="1600" height="900"></canvas>
+    </div>
+
+    <script>
+    // var activities = ["sleep", "work", "eat", "hobby", "study"];
+    // var Jemin = [8, 6, 2, 3, 5];
+    // var Jemin post = [8, 4, 2, 2, 8];
+    // var Ryan = [6, 3, 2, 5, 8];
+    // var Ryan post = [5, 2, 3, 8, 6];
+    // var Chiaki = [9, 5, 1, 3, 6];
+    // var Chiaki post = [8, 5, 2, 3, 6];
+    // var Brandon = [6, 5, 2, 5, 6];
+    // var Brandon post = [8, 6, 3, 2, 5];
+    //
+    // var ctx = document.getElementById("myChart");
+    // var myChart = new Chart(ctx, {
+    //   type: 'radar',
+    //   data: data: {
+    //       Labels: ['sleep', 'work', 'eat', 'hobby', 'study'],
+    //       datasets: [{
+    //         data: [20, 10, 4, 2]
+    //       }]
+    //   }
+    //
+    // })
+
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ["Sleep", "Work", "Eat", "Hobby", "Study"],
+      datasets:[{
+        label: "Jemin",
+        borderColor: "black",
+        backgroundColor: "rgba(255, 0, 0, 0.3)",
+        data: [8, 6, 2, 3, 5],
+      },
+        {
+          label: "Ryan",
+          borderColor: "green",
+          backgroundColor: "rgba(255, 0, 0, 0.3)",
+          data: [6, 3, 2, 5, 8],
+        },
+        {
+          label: "Chiaki",
+          borderColor: "blue",
+          backgroundColor: "rgba(255, 0, 0, 0.3)",
+          data: [9, 5, 1, 3, 6],
+        },
+        {
+          label: "Brandon",
+          borderColor: "yellow",
+          backgroundColor: "rgba(255, 0, 0, 0.3)",
+          data: [6, 5, 2, 5, 6],
+        },
+
+    ]
+  }});
+
+  var ctx = document.getElementById("myChart2");
+  var myChart2 = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["Sleep", "Work", "Eat", "Hobby", "Study"],
+    datasets:[{
+      label: "Jemin",
+      borderColor: "black",
+      backgroundColor: "rgba(255, 0, 0, 0.3)",
+      data: [8, 4, 2, 2, 8],
+    },
+      {
+        label: "Ryan",
+        borderColor: "green",
+        backgroundColor: "rgba(255, 0, 0, 0.3)",
+        data: [5, 2, 3, 8, 6],
+      },
+      {
+        label: "Chiaki",
+        borderColor: "blue",
+        backgroundColor: "rgba(255, 0, 0, 0.3)",
+        data: [8, 5, 2, 3, 6],
+      },
+      {
+        label: "Brandon",
+        borderColor: "yellow",
+        backgroundColor: "rgba(255, 0, 0, 0.3)",
+        data: [8, 6, 3, 2, 5],
+      },
+
+  ]
+}});
+    </script>
+  </body>
+  <!-- Thanks to Tobias Ahlin, whose chart.js tutorial forms the basis of the line graph portion of this exercise -->
+</html>
